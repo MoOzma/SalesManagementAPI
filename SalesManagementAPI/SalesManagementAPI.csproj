@@ -24,7 +24,6 @@
     <Folder Include="Services\" />
     <Folder Include="Middleware\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="DTOs\" />
   </ItemGroup>
 
 </Project>
