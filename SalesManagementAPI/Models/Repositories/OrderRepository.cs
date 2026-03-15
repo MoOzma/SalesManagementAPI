@@ -65,7 +65,7 @@ namespace SalesManagementAPI.Data.Repositories
                 // حساب متوسط قيمة الطلب مع تفادي خطأ القسمة على صفر (DivideByZero)
                 AverageOrderValue = orders.Any()
                     ? orders.Average(o => o.TotalAmount)
-                    : 0,
+                    : 0,//MKK
 
                 // تقرير بأعلى 5 منتجات مبيعاً خلال اليوم
                 TopProducts = orders
