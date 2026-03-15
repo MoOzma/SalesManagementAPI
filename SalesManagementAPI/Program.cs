@@ -17,7 +17,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
+//KPJ
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
