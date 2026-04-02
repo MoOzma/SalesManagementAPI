@@ -57,6 +57,6 @@ namespace SalesManagementAPI.DTOs.Reports
         public int OrdersCount { get; set; }
         public decimal Revenue { get; set; }
     }
-}///O
+}
 
 
