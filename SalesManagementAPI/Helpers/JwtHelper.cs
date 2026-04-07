@@ -46,6 +46,6 @@ namespace SalesManagementAPI.Helpers
 
             // الخطوة 5: تحويل التوكن لنص (String) لإرساله للـ Client
             return new JwtSecurityTokenHandler().WriteToken(token);
-        }///KL;M;
+        }
     }
 }
