@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Services\" />
     <Folder Include="Middleware\" />
     <Folder Include="Interfaces\" />
