@@ -48,7 +48,7 @@ namespace SalesManagementAPI.DTOs.Reports
 
         // تفصيل المبيعات يوماً بيوم داخل هذه الفترة
         public List<DailySalesSummary> DailyBreakdown { get; set; } = new();
-    }
+    }//////LIHLIHLBLI
 
     // ملخص بسيط ليوم واحد — يُستخدم داخل تقرير الفترة الزمنية (DateRangeReport)
     public class DailySalesSummary
@@ -58,4 +58,3 @@ namespace SalesManagementAPI.DTOs.Reports
         public decimal Revenue { get; set; }
     }
 }
-///,;l,;l,l
