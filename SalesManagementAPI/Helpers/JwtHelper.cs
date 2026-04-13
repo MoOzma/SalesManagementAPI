@@ -9,7 +9,7 @@ namespace SalesManagementAPI.Helpers
     {
         private readonly IConfiguration _config;
 
-        // يُحقن تلقائياً ويُمكّننا من قراءة appsettings.json
+     
         public JwtHelper(IConfiguration config)
         {
             _config = config;
@@ -17,35 +17,33 @@ namespace SalesManagementAPI.Helpers
 
         public string GenerateToken(User user)
         {
-            // الخطوة 1: تحويل السر النصي لمفتاح تشفير — التشفير يعمل على bytes وليس نصاً
+            
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
 
-            // الخطوة 2: تحديد خوارزمية التوقيع — HmacSha256 آمن وسريع
+            
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            // الخطوة 3: بناء الـ Claims (بيانات المستخدم المشفرة داخل التوكن)
+            
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), // المعرّف القياسي
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Name, user.FullName),
-                new Claim(ClaimTypes.Role, user.Role), // يستخدمه [Authorize(Roles="Admin")] تلقائياً
-                new Claim("userId", user.Id.ToString()) // Claim مخصص لسهولة الوصول في الكود
+                new Claim(ClaimTypes.Role, user.Role),
+                new Claim("userId", user.Id.ToString()) 
             };
 
-            // الخطوة 4: إنشاء التوكن وضبط مدة الصلاحية
             var expiryHours = double.Parse(_config["Jwt:ExpiryInHours"]!);
 
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(expiryHours), // UtcNow دائماً لتوحيد التوقيت عالمياً
+                expires: DateTime.UtcNow.AddHours(expiryHours), 
                 signingCredentials: credentials
             );
 
-            // الخطوة 5: تحويل التوكن لنص (String) لإرساله للـ Client
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
-}////منىلانلا
+}
