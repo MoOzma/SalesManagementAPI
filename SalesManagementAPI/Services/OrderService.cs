@@ -1,6 +1,7 @@
 ﻿// Services/OrderService.cs
 using SalesManagementAPI.Data.Repositories;
 using SalesManagementAPI.DTOs.Orders;
+using Microsoft.OpenApi.Models;
 
 namespace SalesManagementAPI.Services
 {
@@ -70,7 +71,7 @@ namespace SalesManagementAPI.Services
             await _orderRepo.AddAsync(order);
             await _orderRepo.SaveChangesAsync();
 
-            return await MapToResponseDto(order);
+            return  MapToResponseDto(order);
         }
 
         // تحديث حالة الطلب

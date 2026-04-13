@@ -92,7 +92,7 @@ namespace SalesManagementAPI.Services
                 FullName = user.FullName,
                 Role = user.Role,
                 ExpiresAt = DateTime.UtcNow.AddHours(24),
-                Message = "مرحباً " + user.FullName
+                Message = $"مرحبا {user.FullName}"
             };
         }
     }

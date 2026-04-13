@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
 namespace SalesManagementAPI.DTOs.Orders
 {
     // ما يُرسله العميل لإنشاء طلب جديد
