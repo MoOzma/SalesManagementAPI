@@ -1,6 +1,6 @@
 # 🛒 Sales Management REST API
 
-![.NET 8](https://img.shields.io/badge/.NET-8.0-blueviolet)
+![.NET 10](https://img.shields.io/badge/.NET-8.0-blueviolet)
 ![EF Core](https://img.shields.io/badge/EF%20Core-8.0-blue)
 ![JWT](https://img.shields.io/badge/JWT-Auth-orange)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-2022-red)
