@@ -7,7 +7,7 @@
 
 
 > A robust, production-ready REST API for managing sales order lifecycles,
- built with **ASP.NET Core 8** and **Entity Framework Core** following **Clean Architecture** principles.
+ built with **ASP.NET Core 10** and **Entity Framework Core** following **Clean Architecture** principles.
 
 ---
 
